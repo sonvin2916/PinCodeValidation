@@ -41,3 +41,15 @@ function pincode2()
 read -p "Enter pin code" : $pin3
 pincode2 $pin3
 
+function pincode3()
+{
+	  pattern="^([0-9]){3}[[:space:]]{0,1}[0-9]{3}$"
+	if [[ $pin4 =~ $pattern ]]
+	then
+        	echo "Valid Pin Code"
+	else
+        	echo "Invalid Pin code"
+	fi
+}
+read -p "Enter pin : " pin4
+pincode3 $pin4
